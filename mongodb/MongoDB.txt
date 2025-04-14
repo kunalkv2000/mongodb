@@ -107,6 +107,15 @@ db.company_drives.insertMany
 	{ "cd_id": "cd_004", "company_name": "Infosys", "date": "2020-10-23", "u_id": 12, "mentors": ["m_0004"] }
 ])
 
+// To create mentors Collection
+
+db.mentors.insertMany
+([
+	{ "m_id": "m_0001", "name": "Vishnu", email: "vishnu@example.com", "topics": ["tp_001"], "drives": ["cd_001"], "mentees": ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"] },
+	{ "m_id": "m_0002", "name": "Hardik", email: "hardik@example.com", "topics": ["tp_002"], "drives": ["cd_002"], "mentees": ["17","18","20","22","25","26","27"]},
+	{ "m_id": "m_0003", "name": "Rohit", email: "rohit@example.com", "topics": ["tp_003"], "drives": ["cd_003"], "mentees": ["19","21","23","24","28"] },
+	{ "m_id": "m_0004", "name": "Dhoni", email: "dhoni@example.com", "topics": ["tp_004"], "drives": ["cd_004"], "mentees": ["29","30","31"] }
+])
 
 //Find all the topics and tasks which are thought in the month of October
 
