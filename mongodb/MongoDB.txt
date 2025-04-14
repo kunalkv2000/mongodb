@@ -1,0 +1,255 @@
+// To create Database
+
+use zen
+
+// To create user collection
+
+db.users.insertMany
+([
+	{ u_id: 1, name: "Kunal", email: "kunal@example.com", role: "student" },
+	{ u_id: 2, name: "Roshan", email: "roshan@example.com", role: "student" },
+	{ u_id: 3, name: "Hamdan", email: "hamdan@example.com", role: "student" },
+	{ u_id: 4, name: "Refay", email: "refay@example.com", role: "student" },
+	{ u_id: 5, name: "Safrin", email: "safrin@example.com", role: "student" },
+	{ u_id: 6, name: "Janaki", email: "janaki@example.com", role: "student" },
+	{ u_id: 7, name: "Kamal", email: "kamal@example.com", role: "student" },
+	{ u_id: 8, name: "Kannan", email: "kannan@example.com", role: "student" },
+	{ u_id: 9, name: "Rohan", email: "rohan@example.com", role: "student" },
+	{ u_id: 10, name: "zeus", email: "zeus@example.com", role: "student" },
+	{ u_id: 11, name: "raj", email: "raj@example.com", role: "student" },
+	{ u_id: 12, name: "kalani", email: "kalani@example.com", role: "student" }
+])
+
+// To create codekata collection
+
+db.codekata.insertMany
+([
+	{ "ck_id": "ck_0001","user_id": 1, "problems_solved": 90, "rank": "Awesome" },
+	{ "ck_id": "ck_0001","user_id": 2, "problems_solved": 90, "rank": "Awesome" },
+	{ "ck_id": "ck_0001","user_id": 3, "problems_solved": 85, "rank": "Good" },
+	{ "ck_id": "ck_0001","user_id": 4, "problems_solved": 80, "rank": "Good" },
+	{ "ck_id": "ck_0002","user_id": 5, "problems_solved": 70, "rank": "Excellent" },
+	{ "ck_id": "ck_0002","user_id": 6, "problems_solved": 65, "rank": "Excellent" },
+	{ "ck_id": "ck_0002","user_id": 7, "problems_solved": 60, "rank": "Excellent" },
+	{ "ck_id": "ck_0003","user_id": 8, "problems_solved": 30, "rank": "Not Bad" },
+	{ "ck_id": "ck_0003","user_id": 9, "problems_solved": 20, "rank": "Not Bad" },
+	{ "ck_id": "ck_0004","user_id": 10, "problems_solved": 10, "rank": "Average" },
+	{ "ck_id": "ck_0005","user_id": 11, "problems_solved": 3, "rank": "Bad" },
+	{ "ck_id": "ck_0005","user_id": 12, "problems_solved": 0, "rank": "Bad" }
+])
+
+// To create attendance collection
+
+db.attendance.insertMany
+([
+	{ "user_id": "1", "date": "2020-10-15", "status": "Present" },
+	{ "user_id": "2", "date": "2020-10-16", "status": "Present" },
+	{ "user_id": "3", "date": "2020-10-17", "status": "Present" },
+	{ "user_id": "4", "date": "2020-10-18", "status": "Present" },
+	{ "user_id": "5", "date": "2020-10-19", "status": "Present" },
+	{ "user_id": "6", "date": "2020-10-20", "status": "Present" },
+	{ "user_id": "7", "date": "2020-10-21", "status": "Present" },
+	{ "user_id": "8", "date": "2020-10-04", "status": "Present" },
+	{ "user_id": "9", "date": "2020-10-05", "status": "Present" },
+	{ "user_id": "10", "date": "2020-10-25", "status": "Absent" },
+	{ "user_id": "11", "date": "2020-10-23", "status": "Absent" },
+	{ "user_id": "12", "date": "2020-10-24", "status": "Absent" }
+])
+
+// To create topics collection
+
+db.topics.insertMany
+([
+	{ "tp_id": "tp_001", "name": "FSD-WEB", "description": "Full Stack Web Development Course", "mentors": "m_0001", user_id:["1","2","3","4"], Date: "2020-09-05"},
+	{ "tp_id": "tp_002", "name": "CEH", "description": "Certified Ethical Hacking Course", "mentors": "m_0002", user_id:["5","6","7","8"], Date: "2020-09-10"},
+	{ "tp_id": "tp_003", "name": "UI/UX", "description": "Figma, Adobe XD, Framer", "mentors": "m_0003", user_id:["9","10"], Date: "2020-09-30" },
+	{ "tp_id": "tp_004", "name": "Mobile APP", "description": "IOS, Android", "mentors": "m_0004", user_id:["11","12"], Date: "2020-10-01" },
+	{ "tp_id": "tp_005", "name": "Data Analytics", "description": "Upcoming", Date: "2020-10-31"},
+	{ "tp_id": "tp_006", "name": "AI", "description": "Upcoming", Date: "2020-10-31"},
+	{ "tp_id": "tp_007", "name": "Power BI", "description": "Upcoming", Date: "2020-10-31"},
+	{ "tp_id": "tp_008", "name": "DBA", "description": "Upcoming", Date: "2020-10-31"},
+	{ "tp_id": "tp_009", "name": "Digital Marketing", "description": "Upcoming", Date: "2020-10-31"}
+])
+
+// To create tasks collection
+
+db.tasks.insertMany
+([
+	{ "ta_id": "ta_FSD_001", "title": "Todo App", "description": "To create TODO App", "assigned_to": "1", "status": "Completed", Date: "2020-10-01", "tp_id": "tp_001" },
+	{ "ta_id": "ta_FSD_001", "title": "Todo App", "description": "To create TODO App", "assigned_to": "2", "status": "Completed", Date: "2020-10-01", "tp_id": "tp_001" },
+	{ "ta_id": "ta_FSD_001", "title": "Todo App", "description": "To create TODO App", "assigned_to": "3", "status": "Completed", Date: "2020-10-01", "tp_id": "tp_001" },
+	{ "ta_id": "ta_FSD_001", "title": "Todo App", "description": "To create TODO App", "assigned_to": "4", "status": "Completed", Date: "2020-10-01", "tp_id": "tp_001" },
+	{ "ta_id": "ta_CEH_001", "title": "PT", "description": "Penetration Testing", "assigned_to": "5", "status": "Completed", Date: "2020-10-02", "tp_id": "tp_002" },
+	{ "ta_id": "ta_CEH_001", "title": "PT", "description": "Penetration Testing", "assigned_to": "6", "status": "Completed", Date: "2020-10-02", "tp_id": "tp_002" },
+	{ "ta_id": "ta_CEH_001", "title": "PT", "description": "Penetration Testing", "assigned_to": "7", "status": "Completed", Date: "2020-10-02", "tp_id": "tp_002" },
+	{ "ta_id": "ta_CEH_001", "title": "PT", "description": "Penetration Testing", "assigned_to": "8", "status": "InComplete", Date: "2020-10-02", "tp_id": "tp_002" },
+	{ "ta_id": "ta_UIUX_001", "title": "Figma", "description": "To create Website", "assigned_to": "9", "status": "InComplete", Date: "2020-10-03", "tp_id": "tp_003" },
+	{ "ta_id": "ta_UIUX_001", "title": "Figma", "description": "To create Website", "assigned_to": "10", "status": "InComplete", Date: "2020-10-03", "tp_id": "tp_003" },
+	{ "ta_id": "ta_MA_001", "title": "Flutter", "description": "To create Cross Platform APP", "assigned_to": "11", "status": "InComplete", Date: "2020-10-04", "tp_id": "tp_004" },
+	{ "ta_id": "ta_MA_001", "title": "Flutter", "description": "To create Cross Platform APP", "assigned_to": "12", "status": "InComplete", Date: "2020-10-04", "tp_id": "tp_004" }
+])
+
+// To create company_drives collection
+
+db.company_drives.insertMany
+([
+	{ "cd_id": "cd_001", "company_name": "Google", "date": "2020-10-15", "u_id": 1, "mentors": ["m_0001"] },
+	{ "cd_id": "cd_001", "company_name": "Google", "date": "2020-10-15", "u_id": 2, "mentors": ["m_0001"] },
+	{ "cd_id": "cd_001", "company_name": "Google", "date": "2020-10-15", "u_id": 3, "mentors": ["m_0001"] },
+	{ "cd_id": "cd_001", "company_name": "Google", "date": "2020-10-15", "u_id": 4, "mentors": ["m_0001"] },
+	{ "cd_id": "cd_002", "company_name": "Amazon", "date": "2020-10-25", "u_id": 5, "mentors": ["m_0002"] },
+	{ "cd_id": "cd_002", "company_name": "Amazon", "date": "2020-10-25", "u_id": 6, "mentors": ["m_0002"] },
+	{ "cd_id": "cd_002", "company_name": "Amazon", "date": "2020-10-25", "u_id": 7, "mentors": ["m_0002"] },
+	{ "cd_id": "cd_002", "company_name": "Amazon", "date": "2020-10-25", "u_id": 8, "mentors": ["m_0002"] },
+	{ "cd_id": "cd_003", "company_name": "Microsoft", "date": "2020-10-28", "u_id": 9, "mentors": ["m_0003"] },
+	{ "cd_id": "cd_003", "company_name": "Microsoft", "date": "2020-10-28", "u_id": 10, "mentors": ["m_0003"] },
+	{ "cd_id": "cd_004", "company_name": "Infosys", "date": "2020-10-23", "u_id": 11, "mentors": ["m_0004"] },
+	{ "cd_id": "cd_004", "company_name": "Infosys", "date": "2020-10-23", "u_id": 12, "mentors": ["m_0004"] }
+])
+
+
+//Find all the topics and tasks which are thought in the month of October
+
+db.createView("task_topics", "topics", [
+   {
+      $lookup: {
+         from: "tasks",
+         localField: "tp_id",
+         foreignField: "tp_id",
+         as: "tasksDocs"
+      }
+   },
+   {
+      $project: {
+         _id: 0,
+         name: 1,
+         title: "$tasksDocs.title",
+         Date: "$tasksDocs.Date" // Ensure this matches the actual field name
+      }
+   },
+   {
+      $unwind: "$title"
+   },
+   {
+      $unwind: "$Date"
+   },
+   {
+      $match: {
+         Date: {
+            $gte: ("2020-10-01"),
+            $lte: ("2020-10-31")
+         }
+      }
+   }
+]);
+
+
+//Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+
+db.company_drives.find({
+    date: {
+        $gte: ('2020-10-15'),
+        $lte: ('2020-10-31')
+    }
+})
+
+
+//Find all the company drives and students who are appeared for the placement.
+
+db.createView("drive_placed", "company_drives", [
+    {
+        $lookup: {
+            from: "users",         // Name of the users collection
+            localField: "u_id", // Field in company_drives
+            foreignField: "u_id",  // Field in users
+            as: "usersDocs"        // Name of the output array
+        }
+    },
+	
+	{
+      $project: {
+         _id: 0,
+         company_name: 1,
+         name: "$usersDocs.name"
+      }
+   },
+   
+   {
+      $unwind: "$name"
+   }
+])
+
+
+//Find the number of problems solved by the user in codekata
+
+// will return userid, problem_solved.
+
+db.codekata.find(
+    {}, // Matches all documents
+    { user_id: 1, problems_solved: 1, _id: 0 } // Projects user ID and problems solved
+);
+
+// will return user name, problem_solved.
+
+db.createView("solved", "codekata", [
+    {
+        $lookup: {
+            from: "users",         // Name of the users collection
+            localField: "user_id", // Field in company_drives
+            foreignField: "u_id",  // Field in users
+            as: "usersDocs"        // Name of the output array
+        }
+    },
+	
+	{
+      $project: {
+         _id: 0,
+         problems_solved: 1,
+         name: "$usersDocs.name"
+      }
+   },
+   
+   {
+      $unwind: "$name"
+   }
+])
+
+
+//Find all the mentors with who has the mentee's count more than 15
+
+db.mentors.find({
+    $expr: { $gt: [ { $size: "$mentees" }, 15 ] } // Filter where mentees array size is greater than 15
+})
+
+//Find the number of users who are absent and task is not submitted between 15-oct-2020 and 31-oct-2020
+
+db.createView("incomplete", "attendance", [
+    {
+        $match: {
+            status: "Absent", // Filter absent users
+            date: { 
+                $gte: ("2020-10-15"), 
+                $lte: ("2020-10-31") 
+            }
+        }
+    },
+    {
+        $lookup: {
+            from: "tasks", // Join with the tasks collection
+            localField: "user_id", // Field from attendance to match
+            foreignField: "assigned_to", // Field from tasks to match
+            as: "taskDetails" // Name of the joined data
+        }
+    },
+    {
+        $match: {
+            "taskDetails.status": { $in: ["InComplete"] } // Filter tasks not submitted
+        }
+    },
+    {
+        $group: {
+            _id: null, // No specific grouping key, just count total users
+            count: { $sum: 1 } // Count the number of records
+        }
+    }
+]);
